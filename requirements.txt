@@ -1,0 +1,16 @@
+pip~=24.0
+Pillow~=10.1.0
+Jinja2~=3.1.2
+colorama~=0.4.6
+PyYAML~=6.0.1
+numpy~=1.26.2
+requests~=2.31.0
+packaging~=23.2
+pyparsing~=3.1.1
+matplotlib~=3.8.2
+Django>=4.2  # Latest stable version of Django
+djangorestframework  # For building REST APIs
+django-cors-headers  # To enable CORS for frontend communication
+django-environ  # For environment variable management
+psycopg2  # PostgreSQL database adapter (use if PostgreSQL is your DB)
+sqlite3  # Default Django database (use if not using PostgreSQL)
