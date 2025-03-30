@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
 import { Course } from "@/types/course";
+import Link from "next/link";
 
 const imageMap: Record<string, string> = {
     "Základy jazyka C++": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU1QcWyLr7f0bHiBv4ZKw74dpj5sfS98yJPA&s",
@@ -99,6 +100,14 @@ const UserProfile = () => {
                             />
                             <h3 className="font-bold text-lg mb-2 text-center">{course.title}</h3>
                             <p className="text-gray-700 text-center">{course.description}</p>
+                            {userRole === "teacher" && (
+                                <Link
+                                    href={`/courses/${course.id}/edit`}
+                                    className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                                >
+                                    Upravit kurz
+                                </Link>
+                            )}
                         </li>
                     ))
                 ) : (

@@ -30,3 +30,33 @@ export async function GET() {
         );
     }
 }
+/*
+export async function POST(request: Request) {
+    try {
+        const body = await request.json();
+        const { title, description, teacherId } = body;
+
+        if (!title || !teacherId) {
+            return NextResponse.json(
+                { error: 'Title a teacherId jsou povinné' },
+                { status: 400 }
+            );
+        }
+
+        const newCourse = await prisma.course.create({
+            data: {
+                title,
+                description,
+                teacherId,
+            },
+        });
+
+        return NextResponse.json(newCourse, { status: 201 });
+    } catch (error) {
+        console.error('Chyba při vytváření kurzu:', error);
+        return NextResponse.json(
+            { error: 'Nepodařilo se vytvořit kurz' },
+            { status: 500 }
+        );
+    }
+}*/
